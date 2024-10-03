@@ -1,7 +1,9 @@
 name: staggered_animated_widget
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+author: 'Eng : Ahmed khalid || email : ahmednahal7@gmail.com'
+homepage: "https://www.youtube.com/@just4flutter"
+description: "A Flutter package that provides staggered animations for widgets."
+repository: https://github.com/hmoodaps/staggered_animated_widget.git
+version: 0.0.2
 
 environment:
   sdk: ^3.5.3

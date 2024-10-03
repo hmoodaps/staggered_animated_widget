@@ -1,3 +1,3 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+description: "A Flutter package that provides staggered animations for widgets."
