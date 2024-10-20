@@ -1,17 +1,3 @@
-
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
 # Staggered Animated Widget
 
 A Flutter package that provides staggered animations for widgets.
@@ -29,14 +15,11 @@ To use this package, add it to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  staggered_animated_widget: ^1.0.0 
+  staggered_animated_widget: ^2.0.2 
 ```
-
 ## Usage
-
-Here’s a simple example of how to use the `StaggeredAnimatedWidget`:
-
-```dart
+Here’s a simple example of how to use the StaggeredAnimatedWidget:
+```
 import 'package:flutter/material.dart';
 import 'package:staggered_animated_widget/animation_direction.dart';
 import 'package:staggered_animated_widget/staggered_animated_widget.dart';
@@ -172,18 +155,17 @@ class _StaggeredAnimatedWidgetExampleState extends State<StaggeredAnimatedWidget
   }
 }
 ```
+## Parameters
 
-### Parameters
-
-- `child`: The widget to animate.
-- `delay`: The delay before the animation starts (in milliseconds).
-- `direction`: The direction from which the widget will enter. Can be one of the following:
-  - `AnimationDirection.fromTop`
-  - `AnimationDirection.fromBottom`
-  - `AnimationDirection.fromLeft`
-  - `AnimationDirection.fromRight`
-- `duration`: The duration of the animation (default is 800 milliseconds).
-- `curve`: The curve used for the animation (default is `Curves.easeInOut`).
+- **child**: The widget to animate.
+- **delay**: The delay before the animation starts (in milliseconds).
+- **direction**: The direction from which the widget will enter. Can be one of the following:
+  - **AnimationDirection.fromTop**
+  - **AnimationDirection.fromBottom**
+  - **AnimationDirection.fromLeft**
+  - **AnimationDirection.fromRight**
+- **duration**: The duration of the animation (default is 800 milliseconds).
+- **curve**: The curve used for the animation (default is `Curves.easeInOut`).
 
 ## Additional Information
 
@@ -195,5 +177,5 @@ This package is licensed under the MIT License.
 
 ## Contact
 
-YouTube Channel: [Just4Flutter](https://www.youtube.com/@just4flutter)  
-Email: ahmadnahal7@gmail.com
+- **YouTube Channel**: [Just4Flutter](https://www.youtube.com/@just4flutter)  
+- **Email**: ahmadnahal7@gmail.com
