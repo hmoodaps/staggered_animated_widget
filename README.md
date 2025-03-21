@@ -1,6 +1,9 @@
 # 📦 Staggered Animated Widget
 
 A Flutter package that provides staggered animations for widgets and column .
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/08a20224-e676-412e-9bdb-29b0a0fe5dff" alt="Demo Vid" height="700" style="display:inline-block; margin-right: 60px;">
+</p>
 
 ## 🚀 Features
 
