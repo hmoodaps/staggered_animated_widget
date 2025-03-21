@@ -18,7 +18,7 @@ To use this package, add it to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  staggered_animated_widget: ^2.0.2 
+  staggered_animated_widget: ^2.0.4
 ```
 
 ## 💳 Staggered animated widgets Parameters
