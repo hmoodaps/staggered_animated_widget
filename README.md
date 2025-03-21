@@ -17,159 +17,57 @@ To use this package, add it to your `pubspec.yaml` file:
 dependencies:
   staggered_animated_widget: ^2.0.2 
 ```
-## Usage
-Here’s a simple example of how to use the StaggeredAnimatedWidget:
-```
-import 'package:flutter/material.dart';
-import 'package:staggered_animated_widget/animation_direction.dart';
-import 'package:staggered_animated_widget/staggered_animated_widget.dart';
 
-void main() {
-  runApp(StaggeredAnimatedWidgetExample());
-}
-
-class StaggeredAnimatedWidgetExample extends StatefulWidget {
-  const StaggeredAnimatedWidgetExample({super.key});
-
-  @override
-  State<StaggeredAnimatedWidgetExample> createState() => _StaggeredAnimatedWidgetExampleState();
-}
-
-class _StaggeredAnimatedWidgetExampleState extends State<StaggeredAnimatedWidgetExample> {
-  late bool _showSecond = false;
-  late bool _showThird = false;
-  late bool _showFourth = false;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                StaggeredAnimatedWidget(
-                  delay: 200,
-                  curve: Curves.fastLinearToSlowEaseIn,
-                  direction: AnimationDirection.fromTop,
-                  duration: Duration(milliseconds: 1000),
-                  child: SizedBox(
-                    height: 70,
-                    width: double.infinity,
-                    child: MaterialButton(
-                      onPressed: () {
-                        setState(() {
-                          _showSecond = true;
-                        });
-                      },
-                      color: Colors.blue,
-                      child: Text(
-                        'Show Second ^_^',
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 20),
-                _showSecond
-                    ? StaggeredAnimatedWidget(
-                        delay: 200,
-                        curve: Curves.linearToEaseOut,
-                        direction: AnimationDirection.fromRight,
-                        duration: Duration(milliseconds: 1000),
-                        child: SizedBox(
-                          height: 70,
-                          width: double.infinity,
-                          child: MaterialButton(
-                            onPressed: () {
-                              setState(() {
-                                _showThird = true;
-                              });
-                            },
-                            color: Colors.red,
-                            child: Text(
-                              'Show Third',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      )
-                    : SizedBox(),
-                SizedBox(height: 20),
-                _showThird
-                    ? StaggeredAnimatedWidget(
-                        delay: 200,
-                        curve: Curves.easeInCubic,
-                        direction: AnimationDirection.fromLeft,
-                        duration: Duration(milliseconds: 1000),
-                        child: SizedBox(
-                          height: 70,
-                          width: double.infinity,
-                          child: MaterialButton(
-                            onPressed: () {
-                              setState(() {
-                                _showFourth = true;
-                              });
-                            },
-                            color: Colors.yellow,
-                            child: Text(
-                              'Show Last',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      )
-                    : SizedBox(),
-                SizedBox(height: 20),
-                _showFourth
-                    ? StaggeredAnimatedWidget(
-                        delay: 200,
-                        curve: Curves.bounceIn,
-                        direction: AnimationDirection.fromBottom,
-                        duration: Duration(milliseconds: 200),
-                        child: SizedBox(
-                          height: 70,
-                          width: double.infinity,
-                          child: MaterialButton(
-                            onPressed: () {},
-                            color: Colors.green,
-                            child: Text(
-                              'Last ^_^',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                          ),
-                        ),
-                      )
-                    : SizedBox(),
-                SizedBox(height: 20),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
-```
-## Parameters
+## Staggered animated widgets Parameters
 
 - **child**: The widget to animate.
 - **delay**: The delay before the animation starts (in milliseconds).
 - **direction**: The direction from which the widget will enter. Can be one of the following:
+    - **AnimationDirection.fromTop**
+    - **AnimationDirection.fromBottom**
+    - **AnimationDirection.fromLeft**
+    - **AnimationDirection.fromRight**
+- **duration**: The duration of the animation (default is 800 milliseconds).
+- **curve**: The curve used for the animation (default is `Curves.easeInOut`).
+
+## StaggeredAnimatedColumn Parameters
+
+In addition to individual widgets, the package also provides `StaggeredAnimatedColumn`, which animates a list of child widgets in a staggered manner. Each widget will have a delay before it animates, allowing for a more dynamic effect when displaying multiple widgets.
+
+- **children**: A list of widgets to animate in a staggered manner.
+- **delayIncrement**: The delay between each widget's animation (in milliseconds).
+- **duration**: The duration of each widget's animation (default is 800 milliseconds).
+- **curve**: The curve used for the animation (default is `Curves.easeInOut`).
+- **direction**: The direction from which the widgets will enter. Can be one of the following:
   - **AnimationDirection.fromTop**
   - **AnimationDirection.fromBottom**
   - **AnimationDirection.fromLeft**
   - **AnimationDirection.fromRight**
-- **duration**: The duration of the animation (default is 800 milliseconds).
-- **curve**: The curve used for the animation (default is `Curves.easeInOut`).
+- **spacing**: Optional spacing between the widgets.
+
 
 ## Additional Information
 
-For more complex animations, you can customize the `duration` and `curve` properties inside the `StaggeredAnimatedWidget`. For detailed usage, consider adding more examples to the `/example` folder of your package.
+For more complex animations, you can customize the `duration` and `curve` properties inside the
+`StaggeredAnimatedWidget`. For detailed usage, consider adding more examples to the `/example`
+folder of your package.
+
+
+## ☕ Support My Work
+
+If you find **Easy Stripe Payment** useful and would like to support my work, consider buying me a coffee!
+
+A small cup of coffee might not mean much to you, but for me, it means a lot—it fuels my passion and helps me continue building and improving tools for the Flutter community. 🚀
+
+👉 [Buy me a coffee](https://buymeacoffee.com/just4prog)
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a4c7373d-4f03-4c7c-98de-bce616eae8ed" alt="QR Code" width="200">
+</p>
+
+Your support keeps me motivated to provide more content, updates, and helpful tools. Thank you for being awesome! ❤️
+
+
 
 ## License
 
@@ -177,5 +75,5 @@ This package is licensed under the MIT License.
 
 ## Contact
 
-- **YouTube Channel**: [Just4Flutter](https://www.youtube.com/@just4flutter)  
+- **YouTube Channel**: [Just4Flutter](https://www.youtube.com/@just4flutter)
 - **Email**: ahmadnahal7@gmail.com
