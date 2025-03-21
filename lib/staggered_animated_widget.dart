@@ -1,5 +1,6 @@
 // lib/staggered_animated_widget.dart
 import 'package:flutter/material.dart';
+
 import 'animation_direction.dart';
 
 /// A widget that provides staggered animations for its child.

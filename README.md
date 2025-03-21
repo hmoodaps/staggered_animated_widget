@@ -1,15 +1,15 @@
-# Staggered Animated Widget
+# 📦 Staggered Animated Widget
 
-A Flutter package that provides staggered animations for widgets.
+A Flutter package that provides staggered animations for widgets and column .
 
-## Features
+## 🚀 Features
 
 - Provides a simple way to add staggered animations to your Flutter widgets.
 - Supports multiple animation directions: from top, bottom, left, or right.
 - Easy to use with customizable delay.
 - Added support for customizable duration and curve properties.
 
-## Getting Started
+## 📌 Getting Started
 
 To use this package, add it to your `pubspec.yaml` file:
 
@@ -18,7 +18,7 @@ dependencies:
   staggered_animated_widget: ^2.0.2 
 ```
 
-## Staggered animated widgets Parameters
+## 💳 Staggered animated widgets Parameters
 
 - **child**: The widget to animate.
 - **delay**: The delay before the animation starts (in milliseconds).
@@ -30,7 +30,7 @@ dependencies:
 - **duration**: The duration of the animation (default is 800 milliseconds).
 - **curve**: The curve used for the animation (default is `Curves.easeInOut`).
 
-## StaggeredAnimatedColumn Parameters
+## 💳 StaggeredAnimatedColumn Parameters
 
 In addition to individual widgets, the package also provides `StaggeredAnimatedColumn`, which animates a list of child widgets in a staggered manner. Each widget will have a delay before it animates, allowing for a more dynamic effect when displaying multiple widgets.
 
@@ -46,11 +46,6 @@ In addition to individual widgets, the package also provides `StaggeredAnimatedC
 - **spacing**: Optional spacing between the widgets.
 
 
-## Additional Information
-
-For more complex animations, you can customize the `duration` and `curve` properties inside the
-`StaggeredAnimatedWidget`. For detailed usage, consider adding more examples to the `/example`
-folder of your package.
 
 
 ## ☕ Support My Work
@@ -66,6 +61,13 @@ A small cup of coffee might not mean much to you, but for me, it means a lot—i
 </p>
 
 Your support keeps me motivated to provide more content, updates, and helpful tools. Thank you for being awesome! ❤️
+
+
+## Additional Information
+
+For more complex animations, you can customize the `duration` and `curve` properties inside the
+`StaggeredAnimatedWidget`. For detailed usage, consider adding more examples to the `/example`
+folder of your package.
 
 
 
